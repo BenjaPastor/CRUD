@@ -71,7 +71,7 @@ def anadirOrdenador():
     cpu = input("Introduzca el CPU del ordenador: ")
     listaOrdenadores.append({'id': id, 'NombrePc': nom, 'CPU': cpu})
     print("Insertado con éxito")
-    print("\n")
+    print("\n ")
 
 def actualizarOrdenador():
     id = int(input("Introduzca el Id del Ordenador a actualizar"))
