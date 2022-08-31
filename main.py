@@ -2,8 +2,7 @@
 listaOrdenadores = [{'id': 1, 'NombrePc': 'Pc1', 'CPU': 'I3'},
                     {'id': 2, 'NombrePc': 'Pc2', 'CPU': 'I5'},
                     {'id': 3, 'NombrePc': 'Pc3', 'CPU': 'I7'},
-                    {'id': 4, 'NombrePc': 'Pc3', 'CPU': 'A4'}
-                    ]
+                    {'id': 4, 'NombrePc': 'Pc3', 'CPU': 'A4'}]
 
 
 # función menú
@@ -69,7 +68,7 @@ def anadirOrdenador():
     id = input("Introduzca el id del ordenador: ")
     nom = input("Introduzca el nombre del PC: ")
     cpu = input("Introduzca el CPU del ordenador: ")
-    listaOrdenadores.append({'id': id, 'NombrePc': nom, 'CPU': cpu})
+    listaOrdenadores.append({'id': int(id), 'NombrePc': nom, 'CPU': cpu})
     print("Insertado con éxito")
     print("\n ")
 
@@ -86,14 +85,13 @@ def actualizarOrdenador():
 
 
 def eliminarOrdenador():
-    id = int(input("Introduzca el Id del ordenador a eliminar: "))
-    contador = 0
+    idPC = int(input("Introduzca el Id del ordenador a eliminar: "))
     for x in listaOrdenadores:
-
-        if (x['id']) == id:
-            del listaOrdenadores[contador]
+        if (x['id']) == idPC:
+            index = listaOrdenadores.index(x)
+            del listaOrdenadores[index]
             print("eliminado")
-            contador + 1
+
     print("\n")
     listarOrdenadores()
 
